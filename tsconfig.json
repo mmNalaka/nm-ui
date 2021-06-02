@@ -13,6 +13,6 @@
     "module": "ESNext",
     "declaration": true
   },
-  "include": ["src/components/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
