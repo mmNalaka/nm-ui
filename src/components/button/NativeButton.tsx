@@ -1,6 +1,6 @@
 import React, { forwardRef, useRef } from 'react'
 import { CommonButtonProps } from './button-types'
-
+import 'tailwindcss/tailwind.css'
 export interface NativeButtonProps
   extends CommonButtonProps,
     React.HTMLAttributes<HTMLButtonElement> {
@@ -29,7 +29,12 @@ export const NativeButton = forwardRef<unknown, NativeButtonProps>(
     const buttonRef = useRef(ref)
 
     return (
-      <button ref={buttonRef} {...rest}>
+      <button
+        className="bg-indigo-500"
+        ref={buttonRef}
+        disabled={disabled}
+        {...rest}
+      >
         {children}
       </button>
     )
