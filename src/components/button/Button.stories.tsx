@@ -6,9 +6,6 @@ import { NativeButton, NativeButtonProps } from './NativeButton'
 export default {
   title: 'Example/Button',
   component: NativeButton,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as Meta
 
 const Template: Story<NativeButtonProps> = (args) => <NativeButton {...args} />
@@ -23,4 +20,5 @@ export const Secondary = Template.bind({})
 Secondary.args = {
   children: 'Primary Button',
   type: 'primary',
+  disabled: true,
 }
