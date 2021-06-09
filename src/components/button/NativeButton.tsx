@@ -58,7 +58,7 @@ export const NativeButton = forwardRef<unknown, NativeButtonProps>(
       disabled = false,
       htmlType,
       icon: Icon,
-      iconRight,
+      iconRight: IconRight,
       loading = false,
       size = 'medium',
       type = 'default',
@@ -90,6 +90,7 @@ export const NativeButton = forwardRef<unknown, NativeButtonProps>(
       >
         {Icon && <Icon className="w-5 mr-2" />}
         {children}
+        {IconRight && <IconRight className="w-5 ml-2" />}
       </button>
     )
   },

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
-import { MailIcon } from '@heroicons/react/outline'
+import { MailIcon, ChevronRightIcon } from '@heroicons/react/outline'
 
 import { NativeButton, NativeButtonProps } from './NativeButton'
 
@@ -35,4 +35,5 @@ Icon.args = {
   children: 'Primary Button',
   type: 'primary',
   icon: MailIcon,
+  iconRight: ChevronRightIcon,
 }
