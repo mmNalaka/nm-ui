@@ -11,7 +11,8 @@
     "preserveConstEnums": true,
     "target": "es6",
     "module": "ESNext",
-    "declaration": true
+    "declaration": true,
+    "allowJs": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

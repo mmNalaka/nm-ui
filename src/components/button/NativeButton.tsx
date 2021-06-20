@@ -16,6 +16,9 @@ type StyleClasses = {
   size: {
     [key in ButtonSizes]: string
   }
+  iconSize: {
+    [key in ButtonSizes]: string
+  }
   type: {
     [key in ButtonTypes]: string[]
   }
@@ -33,17 +36,27 @@ const styleClasses: StyleClasses = {
     small: 'text-sm px-3 py-2 leading-4 rounded-sm',
     medium: 'text-sm px-4 py-2 rounded-sm',
     large: 'text-base px-4 py-2 rounded-md',
-    xlarge: 'text-base px-6 py-3 rounded-md',
+    xlarge: 'text-lg px-6 py-3 rounded-md',
+  },
+  iconSize: {
+    tiny: 'h-3 mr-2 ml-1',
+    small: 'h-3.5 mr-3 ml-1',
+    medium: 'h-4 mr-3 ml-1',
+    large: 'h-5 mr-3 ml-2',
+    xlarge: 'h-5 mr-3 ml-2',
   },
   type: {
-    default: ['bg-red-500 bg-red-500 hover:text-gray-50', 'hover:bg-red-600'],
-    primary: ['font-medium text-white bg-indigo-600', 'hover:bg-indigo-700'],
+    default: ['font-medium text-white bg-default-500', 'hover:bg-default-600'],
+    primary: ['font-medium text-white bg-primary-500', 'hover:bg-primary-600'],
     secondary: [],
-    outline: [],
+    outline: [
+      'font-medium text-primary-500 bg-transparent border-primary-500',
+      'hover:bg-primary-600 hover:text-white',
+    ],
     link: [],
     text: [],
     dashed: [
-      'border text-gray-500 bg-transparent border-gray-200 border-dashed',
+      'font-medium border text-gray-500 bg-transparent border-gray-200 border-dashed',
       'hover:text-gray-600 hover:border-gray-600',
     ],
   },
@@ -88,9 +101,9 @@ export const NativeButton = forwardRef<unknown, NativeButtonProps>(
         disabled={disabled}
         {...rest}
       >
-        {Icon && <Icon className="w-5 mr-2" />}
+        {Icon && <Icon className={styleClasses.iconSize[size]} />}
         {children}
-        {IconRight && <IconRight className="w-5 ml-2" />}
+        {IconRight && <IconRight className={styleClasses.iconSize[size]} />}
       </button>
     )
   },

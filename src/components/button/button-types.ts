@@ -12,7 +12,7 @@ export type ButtonSizes = 'tiny' | 'small' | 'medium' | 'large' | 'xlarge'
 export type CommonButtonProps = {
   block?: boolean
   className?: string
-  icon: React.ElementType<any>
+  icon?: React.ElementType<any>
   iconRight?: React.ElementType<any>
   loading?: boolean
   ref?: any
