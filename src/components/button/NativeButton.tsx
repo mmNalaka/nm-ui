@@ -3,6 +3,7 @@ import classNames from 'classnames'
 
 import { ButtonSizes, ButtonTypes, CommonButtonProps } from './button-types'
 import { joinStrings } from '../../utils/helpers'
+
 export interface NativeButtonProps
   extends CommonButtonProps,
     React.HTMLAttributes<HTMLButtonElement> {

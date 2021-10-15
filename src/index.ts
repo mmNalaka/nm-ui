@@ -1,5 +1,5 @@
 // Theme configurations
-export * from './theme/default-config'
+export * from './theme/default-theme'
 
 // Components
-export * from './components/button'
+export * from './components/button/'
